@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+
+abstract Base_de_datos
+Base_de_datos <|-- Libro
+Base_de_datos <|-- Periodico
+Base_de_datos <|-- Revista
+Base_de_datos<|-- CD
+Biblioteca o-- Base_de_datos
+Usuario -- Biblioteca
+
+Usuario : nombre
+Usuario : id
+
+Libro : genero
+Revista : credibilidad
+Revista : formato
+Periodico : seccion
+CD : tamaño GB
+Base_de_datos : titulo
+Base_de_datos : autor 
+Base_de_datos : año
+Base_de_datos : editorial
+
+Biblioteca : llamar B.D()
+Biblioteca : Obtener B.D()
+Biblioteca : Mostrar B.D()
+Biblioteca : Entregar B.D()
+
+
+
+@enduml
